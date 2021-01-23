@@ -1,4 +1,5 @@
 import { exportFunctions } from "./script";
+import "regenerator-runtime/runtime";
 
 describe("Test script.js", () => {
   let formEl;

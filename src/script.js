@@ -2,7 +2,6 @@ const RESPONSE_OK = 200;
 const ZOOM_CITY_SIZE = 10;
 
 async function pageLoad() {
-  console.log(pageLoad);
   const defaultLocation = await exportFunctions.getDefaultLocation();
   exportFunctions.maintainLocationInfo(defaultLocation);
   const formEl = document.querySelector("form");
@@ -40,7 +39,7 @@ function showWeather(weatherInfo, city) {
     weatherInfoEl.appendChild(p1);
 
     const weatherPic = weatherInfo.weather[0];
-    const {icon} = weatherPic;
+    const { icon } = weatherPic;
     const img = document.createElement("img");
     img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
     weatherInfoEl.appendChild(img);
@@ -53,8 +52,9 @@ function showWeather(weatherInfo, city) {
 
 async function getWeather(cityName) {
   const appId = "2226af13e13530416ef7ac7e81d578aa";
-  const url = `https://api.openweathermap.org/data/2.5/weather?
-                units=metric&q=${cityName}&appid=${appId}`;
+  const url =
+    `https://api.openweathermap.org/data/2.5/weather?` +
+    `units=metric&q=${cityName}&appid=${appId}`;
   const response = await fetch(url);
   const responceJson = await response.json();
   return responceJson;
