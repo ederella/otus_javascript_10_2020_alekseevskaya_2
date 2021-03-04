@@ -50,10 +50,9 @@ export function saveRequestInfo(formElement, ol) {
 }
 
 export function showCitiesFromLocalStorage(formElement) {
-  const sortedLocalStorage = Object.keys(localStorage).sort((
-    key1,
-    key2
-  ) => localStorage.getItem(key1) - localStorage.getItem(key2));
+  const sortedLocalStorage = Object.keys(localStorage).sort(
+    (key1, key2) => localStorage.getItem(key1) - localStorage.getItem(key2)
+  );
   const ol = document.querySelector("ol");
   ol.innerHTML = "";
 
