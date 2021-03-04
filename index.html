@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      .imageposition {
+        display: table-cell;
+        height: 300px;
+        text-align: center;
+        width: 300px;
+        vertical-align: middle;
+      }
+      .weatherposition {
+        display: table-cell;
+        height: 300px;
+        text-align: center;
+        width: 300px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input
+        id="userInput"
+        placeholder="Type and press enter"
+        required
+        autofocus
+      />
+      <button>Найти</button>
+    </form>
+    <div class="weatherposition">
+      <p id="currentWeather"></p>
+    </div>
+    <div class="imageposition">
+      <img id="location" height="300" width="300" />
+    </div>
+    <p>Вы смотрели:</p>
+    <ol></ol>
+  </body>
+</html>
